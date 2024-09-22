@@ -1,0 +1,128 @@
+<script>
+    // demo while
+
+    let i = 10;
+
+    while (i < 15) {
+
+        console.log('While demo ');
+        console.log('i=' + i);
+        i++
+
+    }
+
+
+</script>
+
+
+<script>
+    // demo while
+
+    let j = 10;
+
+    do {
+        console.log('do while demo ');
+        console.log('j=' + j);
+        j++;
+
+    } while (j < 15);
+
+
+</script>
+
+
+<script>
+    console.log("demo switch");
+
+    let day = new Date().getDay(); // Gets the current day of the week (0 - 6)
+    day = 5;
+
+    switch (day) {
+        case 0:
+            console.log('Today is Sunday.');
+            break;
+        case 1:
+            console.log('Today is Monday.');
+            break;
+        case 2:
+            console.log('Today is Tuesday.');
+            break;
+        case 3:
+            console.log('Today is Wednesday.');
+            break;
+        case 4:
+            console.log('Today is Thursday.');
+            break;
+        case 5:
+            console.log('Today is Friday.');
+            break;
+        case 6:
+            console.log('Today is Saturday.');
+            break;
+        default:
+            console.log('Invalid day.');
+    }
+
+
+</script>
+
+
+<script>
+    console.log('DEMO FOR OF  ');
+
+    const fruits = ['apple', 'banana', 'cherry'];
+
+    for (fruit of fruits) {
+        console.log(fruit);
+    };
+
+    console.log('\nDEMO normal FOR loop ');
+    for (let i=0; i< fruits.length; i++) {
+        console.log(fruits[i]);
+    }
+
+    // CHALLENGE Create an array of 4 Car objects with properties, name, topSpeed. 
+    // Then print the topspeed of each of the car object either using FOR..OF or Normal FOR loop or a WHILE loop.
+
+     // CHALLENGE Create an array of 4 Car objects with properties, name, topSpeed. 
+    // Use a switch -- case statement to print all those cars that have speed > 100
+
+    console.log("SOLUTION  on challnge 1 ");
+    class Car {
+        constructor(name, topSpeed) {
+            this.name = name;
+            this.topSpeed = topSpeed
+        }
+    };
+    
+    const car1 = new Car("Nexon", 235);
+    const car2 = new Car("Punch", 220);
+    const car3 = new Car("Audi", 275);
+    const car4 = new Car("Benz", 300);
+    
+    const cars = [car1, car2, car3, car4];
+    
+    //console.log(cars);
+    console.log("TOP SPEED OF THE CARS: ");
+    for(let i=0; i < cars.length; i++) {
+        console.log('for solution 1 demo ');
+        console.log(cars[i].topSpeed);
+    }
+
+</script>
+
+<script>
+    console.log("SOLUTION  2 ");
+    const cars1 = [
+      { name: 'Ferrari', topSpeed: 200 },
+      { name: 'Lamborghini', topSpeed: 220 },
+      { name: 'Porsche', topSpeed: 210 },
+      { name: 'Bugatti', topSpeed: 250 }
+  ];
+  i = 0;
+  while (i < cars1.length) {
+    console.log('soljuiton 2  demo ');
+      console.log(cars1[i].topSpeed);
+      i++;
+  }
+  </script>
