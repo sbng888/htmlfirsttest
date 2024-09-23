@@ -1,10 +1,11 @@
 <script>
     let add = (a,b) => {
-        for (let i = 0; i < 1000000000; i++) {
+        for (let i = 0; i < 1000000000000; i++) {
             
          };
          console.log("Inside add function " + (a + b));
         return (a + b);
+        //return 0;
     };
 
     /*
@@ -23,8 +24,8 @@
 
             // do some long runing job
             let result = add(2, 5);
-
-            let jobSuccess = false; // simulating the job failure
+            let jobSuccess = true; // simulating the job failure
+            if (result != 0) {jobSuccess = true} else {jobSuccess =false }
             if (jobSuccess) {
                 f1(result);
             } else {
