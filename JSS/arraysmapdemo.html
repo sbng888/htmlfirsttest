@@ -1,0 +1,62 @@
+<script src="student.js"></script>
+
+
+<script>
+
+    let studentsArray = [
+        new Student("ram", 28, 5.9),
+        new Student("sam", 19, 5.5),
+        new Student("jay", 40, 6.0),
+        new Student("mohan", 18, 5.4),
+        new Student("rohan", 21, 5.8)
+    ];
+
+    //let arrOfNames = studentsArray.map(s => s.name);
+
+    //arrOfNames.forEach( elem => console.log(elem));
+
+    function showStudentNames(){
+
+        let arrOfNames = studentsArray.map( s => `<li> ${s.name} </li>`);
+        console.log(arrOfNames);
+
+        nameBulletedList = '';
+        for(let elem of arrOfNames){
+            nameBulletedList =  nameBulletedList +  elem;
+        };
+        console.log(nameBulletedList);
+
+       document.getElementById("stuList").innerHTML = nameBulletedList;
+    }
+
+    function f1(){
+        console.log("mouse enter the h1 element");       
+    }
+
+    let f2 = () => {
+        console.log("mouse left the h1 element");       
+    }
+    
+    // SOLUTION to CHALLENGE
+    let f3 = () => {
+        document.getElementById("myh1").style.color = "blue";
+    }
+
+    let f4 = (event) => {
+        document.getElementById("messages").innerHTML =  event.target.value;
+    }
+</script>
+
+<h1 id="myh1" onmouseenter="f1()" onmouseleave="f2()" onclick="f3()">Map Demo</h1>
+<ul id="stuList"> </ul>
+<button onclick="showStudentNames()"> Show Student list </button>
+
+<!-- // CHALLENGE : When you click the the h1 element "Map Demo" 
+// it should become red colored "Map Demo" -->
+<br>
+<div id="messages"> </div>
+
+<br><br>
+<form>
+    <input type="text" value="100" onchange="f4(event)" >
+</form>
