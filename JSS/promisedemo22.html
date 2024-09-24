@@ -37,15 +37,16 @@
     }
 
     
+    let prom10 = doSumAsynchrounsly(10);
+    prom10
+    .then (res => console.log(res))
+    .catch (err => console.log(err));
+
+
     let prom10000000 = await doSumAsynchrounsly(50000000000); // 
     let prom1000000 = await doSumAsynchrounsly(100000000); // 
     let prom100000000 = await doSumAsynchrounsly(100000000); // 
     let prom100 = await doSumAsynchrounsly(10); // 
     
-
-
-
-
-   
 
 </script>
